@@ -3,6 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  componentWillMount() {
+    this.fetchFromUrl();
+  }
+
+  fetchFromUrl = async () => {
+    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/hello`);
+    const body = await response.json();
+
+    console.log(body);
+  };
+
   render() {
     return (
       <div className="App">
