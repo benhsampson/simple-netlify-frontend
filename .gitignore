@@ -21,4 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # This might very well be the problem
-.env
+# .env
